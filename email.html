@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <title>Email Delegation</title>
+        <style>
+        html { background: rgba(0,0,0,0); color: #222; font-family: sans-serif; font-size: 1em; line-height: 1.4; }
+        .email_header p { margin: 0; padding: .6em 0 .6em .5em; border-bottom: solid 1px #ccc; }
+        .email_header p > span { color: gray; }
+        .cursor { background: rgb(0,128,255); margin-top: .5em; margin-left: .5em; height: 1.2em; width: .2em; }
+        .sig { font-size: 1em; margin: 0; padding: .6em 0 1em .5em; }
+        /* START CSS FOR BRIAN & CHITONG */
+
+        .email_beacon_info .section { clear: both; margin: 0; padding: .6em 0 .6em .5em; border-top: solid 1px rgb(204, 204,204); }
+        .email_beacon_info .alert { padding-left: 3em; padding-bottom: 1em; border-top-width: 3px; }
+        .email_beacon_info .alert img { display: block; margin-left: -2.5em; float: left; }
+        .email_beacon_info .alert .name { margin: 0; float: left; width: 78%; font-size: 1em; line-height: 1.2em; }
+        .email_beacon_info .alert .time { float: left; margin: 0; padding-left: .5em; color: #aaa; font-size: .8em; }
+        .email_beacon_info .alert .description { clear: left; margin: .2em 0 0 0; color: #888; font-size: .8em; }
+        .email_beacon_info .alert .vm { clear: left; margin: .2em 0 .5em 0; font-size: .8em; ; font-weight: bold; }
+        .email_beacon_info .solution { position: relative; margin-left: -3em; padding-left: 3em; }
+        .email_beacon_info .solution img { position: absolute; width: 1.1em; top: -2px; margin-left: -2.2em; }
+        .email_beacon_info .solution a { margin: -.3em 0 .5em 0; float: left; font-size: .8em; line-height: 1.2em; color: rgb(51,153,204); font-weight: bold; text-decoration: none; }
+        .email_beacon_info .solution blockquote { clear: left; margin: 0 0 0 -3em; padding: .5em .5em .5em 3em; background: rgb(166,215,255); color: #666; font-size: .8em; font-style: italic; border-radius: 3px; }
+
+        /* END CSS FOR BRIAN & CHITONG */
+        </style>
+    </head>
+    <body>
+        <div class="email_header">
+            <p><span>To:</span> Junior Admins</p>
+            <p><span>Cc/Bcc, From:</span> Remote Head Admin</p>
+            <p><span>Subject:</span> VM Memory Usage is above 95&hellip;</p>
+        </div>
+        <div class="cursor"></div>
+        <p class="sig">-- Bob Blogs, Head Admin, Acme Inc.<br/>(even with this phone I type like crap)</p>
+        <!-- START HTML FOR BRIAN & CHITONG -->
+
+        <div class="email_beacon_info">
+            <div class="section alert red">
+                <img src="images/DetailsAnomaliesRed.png" title="error"/>
+                <p class="name">VM Memory Usage is above 95% for 10 minutes</p>
+                <p class="time">3:42 PM</p>
+                <p class="description">Default alarm to monitor virtual machine memory usage</p>
+                <p class="vm"><span>VM: </span>acme-123456-FOO0042</p>
+                <div class="section solution kb_article">
+                    <img src="images/redBookmark.png" title="bookmark"/>
+                    <a href="#">Configuring Coriad EtherDrive SAN aplicances and deploying with ESXi 5.x (Partner Support) (1031322)</a>
+                    <blockquote>All LUNs being presented to an ESX Server host (VMFS and RDM). Any capacity larger than the limit is not handled. The LUN may not be presented as a choice for a data store in the Virtual Infrastructure or vSphere Client. All LUNs being presented to an ESX Server host (VMFS and RDM).</blockquote>
+                    <div style="clear: both"></div>
+                </div>
+                <div class="section solution web_page">
+                    <img src="images/redBookmark.png" title="bookmark"/>
+                    <a href="#">The Compatibility Guides are now updated with VSAN and vFlash info!</a>
+                    <div style="clear: both"></div>
+                </div>
+            </div>
+            <div class="section alert yellow">
+                <img src="images/DetailsAnomaliesYellow.png" title="warning"/>
+                <p class="name">Capacity over limit</p>
+                <p class="time">2:32 PM</p>
+                <p class="vm"><span>VM: </span>Load Balancer</p>
+                <div class="section solution kb_article">
+                    <img src="images/redBookmark.png" title="bookmark"/>
+                    <a href="#">Troubleshooting a LUN that is extended in size past the 2TB/2047GB limit(1004230)</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- END HTML FOR BRIAN & CHITONG -->
+        <script src="js/vendor/jquery-1.9.1.min.js"></script>
+        <script>
+
+$(document).ready(function() {
+        'use strict';
+        if ($('.content').length === 0) {  // when viewed outside of container
+            $('body').css({
+                'margin': '0 auto',
+                'width': '320'
+            });
+            $('.email_header').hide();
+            $('.cursor').hide();
+            $('.sig').hide();
+        }
+});
+
+        </script>
+    </body>
+</html>
