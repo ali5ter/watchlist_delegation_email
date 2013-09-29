@@ -8,7 +8,7 @@
         .email_header p > span { color: gray; }
         .cursor { background: rgb(0,128,255); margin-top: .5em; margin-left: .5em; height: 1.2em; width: .2em; }
         .sig { font-size: 1em; margin: 0; padding: .6em 0 1em .5em; }
-        /* START CSS FOR BRIAN & CHITONG */
+        /* TO BE DELETED...
 
         .email_beacon_info .section { clear: both; margin: 0; padding: .6em 0 .6em .5em; border-top: solid 1px rgb(204, 204,204); }
         .email_beacon_info .alert { padding-left: 3em; padding-bottom: 1em; border-top-width: 3px; }
@@ -22,7 +22,7 @@
         .email_beacon_info .solution a { margin: -.3em 0 .5em 0; float: left; font-size: .8em; line-height: 1.2em; color: rgb(51,153,204); font-weight: bold; text-decoration: none; }
         .email_beacon_info .solution blockquote { clear: left; margin: 0 0 0 -3em; padding: .5em .5em .5em 3em; background: rgb(166,215,255); color: #666; font-size: .8em; font-style: italic; border-radius: 3px; }
 
-        /* END CSS FOR BRIAN & CHITONG */
+        END CSS FOR BRIAN & CHITONG */
         </style>
     </head>
     <body>
@@ -32,9 +32,165 @@
             <p><span>Subject:</span> VM Memory Usage is above 95&hellip;</p>
         </div>
         <div class="cursor"></div>
-        <p class="sig">-- Bob Blogs, Head Admin, Acme Inc.<br/>(even with this phone I type like crap)</p>
-        <!-- START HTML FOR BRIAN & CHITONG -->
+        <p class="sig">-- Bob Blogs, Head Admin, Acme Inc.</p>
+        <!-- START HTML FOR BRIAN & CHITONG... let's party like it's 1999... -->
 
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+    <tr>
+        <td>
+            <table align="center" cellpadding="0" cellspacing="0"> <!-- how do you make max width be 600px -->
+
+                <tr> <!-- min width is 320px -->
+                    <td width="8" height="1"></td> <!-- padding-left: .5em -->
+                    <td width="40" height="1"></td> <!-- padding-left: 2.5em -->
+                    <td height="1"></td>
+                    <td width="44" height="1"></td>
+                    <td width="8" height="1"></td> <!-- padding-left: .5em -->
+                </tr>
+
+                <!-- ## START ALERT -->
+                <tr><td colspan="5" height="3" style="background-color: #ccc"></td></tr> <!-- border-top: solid 3px rbg(204, 204, 204) -->
+                <tr><td colspan="5" height="9" ></td></tr> <!-- padding: .5em -->
+                <!-- ## alert priority, name, date -->
+                <tr>
+                    <td valign="top" colspan="2" align="center">
+                        <img src="images/DetailsAnomaliesRed.png" style="display: block;" alt="error"/>
+                    </td>
+                    <td valign="top" valign="top" style="font-family: sans-serif; font-size: 1em; line-height: 1.2em; color: #222">
+                        VM Memory Usage is above 95% for 10 minutes
+                    </td>
+                    <td valign="top" colspan="2" align="left" style="font-family: sans-serif; font-size: .8em; line-height: 1.4em; color: #aaa">
+                        3:42 PM
+                    </td>
+                </tr>
+                <tr><td colspan="5" height="3" ></td></tr> <!-- padding: .2em -->
+                <!-- ## alert description -->
+                <tr>
+                    <td colspan="2"></td>
+                    <td colspan="3" style="font-family: sans-serif; font-size: .8em; line-height: 1.4em; color: #888">
+                        Default alarm to monitor virtual machine memory usage
+                    </td>
+                </tr>
+                <tr><td colspan="5" height="3" ></td></tr> <!-- padding: .2em -->
+                <!-- ## alert vm -->
+                <tr>
+                    <td colspan="2"></td>
+                    <td colspan="3" style="font-family: sans-serif; font-size: .8em; font-weight: bold; line-height: 1.4em; color: #222">
+                        <span>VM: </span><a href="#" style="font-weight: bold; color:#39c">acme-123456-FOO0042</a>
+                    </td>
+                </tr>
+                <tr><td colspan="5" height="9" ></td></tr> <!-- padding: .5em -->
+
+                <!-- ## START SOLUTION - kb article -->
+                <tr><td colspan="5" height="1" style="background-color: #ccc"></td></tr> <!-- border-top: solid 1px rbg(204, 204, 204) -->
+                <tr>
+                    <td colspan="2" rowspan="2" valign="top" colspan="2" align="center">
+                        <img src="images/redBookmark.png" width="17" style="display: block;" alt="bookmark"/>
+                    </td>
+                    <td colspan="3" height="9" ></td></tr> <!-- padding: .5em -->
+                </tr>
+                <!-- ## article link -->
+                <tr>
+                    <td valign="top" colspan="3" style="font-family: sans-serif; font-size: .8em; line-height: 1.2em; color: #222">
+                        <a href="#" style="font-weight: bold; color:#39c">
+                            Configuring Coriad EtherDrive SAN aplicances and deploying with ESXi 5.x (Partner Support) (1031322)
+                        </a>
+                    </td>
+                </tr>
+                <tr><td colspan="5" height="9" ></td></tr> <!-- padding: .5em -->
+                <!-- ## article quote -->
+                <tr>
+                    <td></td>
+                    <td colspan="4" height="9" style="background-color: #a6d7ff"></td></tr> <!-- padding: .5em -->
+                </tr>
+                <tr>
+                    <td></td>
+                    <td valign="top" align="center" style="background-color: #a6d7ff">
+                        <img src="images/icon_quote.png" width="17" style="display: block;" alt="quotation"/>
+                    </td>
+                    <td colspan="2" valign="top" style="background-color: #a6d7ff; font-family: sans-serif; font-size: .8em; font-style: italic; line-height: 1.2em; color: #666">
+                        All LUNs being presented to an ESX Server host (VMFS and RDM). Any capacity larger than the limit is not handled. The LUN may not be presented as a choice for a data store in the Virtual Infrastructure or vSphere Client. All LUNs being presented to an ESX Server host (VMFS and RDM).
+                    </td>
+                    <td style="background-color: #a6d7ff"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td colspan="4" height="9" style="background-color: #a6d7ff"></td></tr> <!-- padding: .5em -->
+                </tr>
+                <tr><td colspan="5" height="9" ></td></tr> <!-- padding: .5em -->
+
+                <!-- ## START SOLUTION - web page -->
+                <tr><td colspan="5" height="1" style="background-color: #ccc"></td></tr> <!-- border-top: solid 1px rbg(204, 204, 204) -->
+                <tr>
+                    <td colspan="2" rowspan="2" valign="top" colspan="2" align="center">
+                        <img src="images/redBookmark.png" width="17" style="display: block;" alt="bookmark"/>
+                    </td>
+                    <td colspan="3" height="9" ></td></tr> <!-- padding: .5em -->
+                </tr>
+                <!-- ## web page link -->
+                <tr>
+                    <td valign="top" colspan="3" style="font-family: sans-serif; font-size: .8em; line-height: 1.2em; color: #222">
+                        <a href="#" style="font-weight: bold; color:#39c">
+                            The Compatibility Guides are now updated with VSAN and vFlash info!
+                        </a>
+                    </td>
+                </tr>
+                <tr><td colspan="5" height="9" ></td></tr> <!-- padding: .5em -->
+
+                <!-- ## end alert -->
+                <tr><td colspan="5" height="9" ></td></tr> <!-- padding: .5em -->
+
+                <!-- ## START ALERT -->
+                <tr><td colspan="5" height="3" style="background-color: #ccc"></td></tr> <!-- border-top: solid 3px rbg(204, 204, 204) -->
+                <tr><td colspan="5" height="9" ></td></tr> <!-- padding: .5em -->
+                <!-- alert priority, name, date -->
+                <tr>
+                    <td valign="top" colspan="2" align="center">
+                        <img src="images/DetailsAnomaliesYellow.png" style="display: block;" alt="warning"/>
+                    </td>
+                    <td valign="top" valign="top" style="font-family: sans-serif; font-size: 1em; line-height: 1.2em; color: #222">
+                        Capacity over limit
+                    </td>
+                    <td valign="top" colspan="2" align="left" style="font-family: sans-serif; font-size: .8em; line-height: 1.4em; color: #aaa">
+                        2:42 PM
+                    </td>
+                </tr>
+                <tr><td colspan="5" height="3" ></td></tr> <!-- padding: .2em -->
+                <!-- #### alert vm -->
+                <tr>
+                    <td colspan="2"></td>
+                    <td colspan="3" style="font-family: sans-serif; font-size: .8em; font-weight: bold; line-height: 1.4em; color: #222">
+                        <span>VM: </span><a href="#" style="font-weight: bold; color:#39c">acme-78901-BAA0042</a>
+                    </td>
+                </tr>
+                <tr><td colspan="5" height="9" ></td></tr> <!-- padding: .5em -->
+
+                <!-- ## START SOLUTION - kb article -->
+                <tr><td colspan="5" height="1" style="background-color: #ccc"></td></tr> <!-- border-top: solid 1px rbg(204, 204, 204) -->
+                <tr>
+                    <td colspan="2" rowspan="2" valign="top" colspan="2" align="center">
+                        <img src="images/redBookmark.png" width="17" style="display: block;" alt="bookmark"/>
+                    </td>
+                    <td colspan="3" height="9" ></td></tr> <!-- padding: .5em -->
+                </tr>
+                <!-- ## article link -->
+                <tr>
+                    <td valign="top" colspan="3" style="font-family: sans-serif; font-size: .8em; line-height: 1.2em; color: #222">
+                        <a href="#" style="font-weight: bold; color:#39c">
+                            Troubleshooting a LUN that is extended in size past the 2TB/2047GB limit(1004230)
+                        </a>
+                    </td>
+                </tr>
+                <tr><td colspan="5" height="9" ></td></tr> <!-- padding: .5em -->
+                <!-- ## end alert -->
+                <tr><td colspan="5" height="9" ></td></tr> <!-- padding: .5em -->
+
+            </table>
+        </td>
+    </tr>
+</table>
+
+        <!-- TO BE DELETED...
         <div class="email_beacon_info">
             <div class="section alert red">
                 <img src="images/DetailsAnomaliesRed.png" title="error"/>
@@ -65,6 +221,7 @@
                 </div>
             </div>
         </div>
+        -->
 
         <!-- END HTML FOR BRIAN & CHITONG -->
         <script src="js/vendor/jquery-1.9.1.min.js"></script>
