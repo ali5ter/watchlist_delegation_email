@@ -186,6 +186,10 @@
 $(document).ready(function() {
         'use strict';
         if ($('.content').length === 0) {  // when viewed outside of container
+            $('table table').css({
+                'border': '1px solid #ddd',
+                'padding': '0 .5em'
+            });
             $('.email_header').hide();
             $('.cursor').hide();
             $('.sig').hide();
