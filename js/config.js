@@ -3,7 +3,7 @@ var config = {
         'color': '#fff',
         'height': '749px',
         'width': '383px',
-        'top': '40px'
+        'top': '0'
     },
     'content': {    // the area in the wizard chrome to be populated
         'height': '414',

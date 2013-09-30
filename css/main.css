@@ -120,10 +120,19 @@ textarea {
     z-index: 1000;
 }
 
+.group {
+    padding: 20px;
+}
+
 .container {
-    margin: auto;
     position: relative;
+    float: left;
+    padding-left: 20px;
     /* height and width calculated after container image loaded */
+}
+
+.container:first {
+    padding-left: 0;
 }
 
 .container > img {
@@ -140,15 +149,16 @@ textarea {
     overflow: auto;
 }
 
-::-webkit-scrollbar { width: 3px; }
-::-webkit-scrollbar-track { background: rgba(0, 0, 0, 0); }
-::-webkit-scrollbar-thumb {
+.content::-webkit-scrollbar { width: 3px; }
+.content::-webkit-scrollbar-track { background: rgba(0, 0, 0, 0); }
+.content::-webkit-scrollbar-thumb {
     margin: 10px;
     background-color: rgba(0,0,0,0.2);
     -webkit-border-radius: 3px;
 }
 
-
+.label { margin-top: -1em; }
+.label a { font-size: .8em; }
 
 
 

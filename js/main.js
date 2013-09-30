@@ -13,8 +13,14 @@ $(document).ready(function() {
     annotation.click( function() { annotation.toggle(); });
 
     resetLayout(function() {
-        $('.container > .content').load('email.html', function() {
-            console.log('content loaded');
+        $('.container > .content.html').load('email.html', function() {
+            console.log('html email content loaded');
+        });
+        $('.container > .content.plain').load('email_plain.html', function() {
+            console.log('plain email content loaded');
+        });
+        $('.container > .content.attachment').load('email_attachment.html', function() {
+            console.log('attachment email content loaded');
         });
     });
 });
