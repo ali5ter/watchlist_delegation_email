@@ -19,9 +19,6 @@ $(document).ready(function() {
         $('.container > .content.plain').load('email_plain.html', function() {
             console.log('plain email content loaded');
         });
-        $('.container > .content.attachment').load('email_attachment.html', function() {
-            console.log('attachment email content loaded');
-        });
     });
 });
 
