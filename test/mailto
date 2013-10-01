@@ -1,0 +1,31 @@
+#!/bin/bash
+# @file mailto
+# ☆  Cheesy test script to send a multipart email
+#    Tested on OSX 10.8.5 only
+# @author Alister Lewis-Bowen <alister@vmware.com>
+# @usage mailto email subject plain_message_file html_message_file
+# @requires sendmail, md5
+
+RECIPIENT=$1
+SUBJECT=${2:-Test e-mail}
+PLAIN=${3:-plain}
+HTML=${4:-html}
+BOUNDARY=$(md5 -q -s 'cheezy_email_script')
+
+(
+ echo 'From: test@somedomain.com'
+ echo 'Reply-To: donotreply@somedomain.com'
+ echo "To: $RECIPIENT"
+ echo "Subject: $SUBJECT"
+ echo 'MIME-Version: 1.0'
+ echo "Content-Type: multipart/alternative; boundary=$BOUNDARY"
+ echo ''
+ echo "$(cat $PLAIN)"
+ echo ''
+ echo "--$BOUNDARY"
+ echo 'Content-Type: text/html; charset="utf-8"'
+ echo ''
+ echo "$(cat $HTML)"
+ echo ''
+ echo "--$BOUNDARY--"
+) | sendmail -t

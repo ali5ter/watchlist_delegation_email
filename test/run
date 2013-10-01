@@ -1,0 +1,23 @@
+#!/bin/bash
+
+BASE=$(dirname $0)
+TMPFILE=.run_beacon_email_test-XXXXXXXX
+
+function _subject { cat "$1" | grep 'Subject:' | sed -E 's#.*</span>(.*)</p>.*#\1#' ; }
+function _line { cat "$1" | grep -n "$2" | cut -f1 -d:; }
+function _first { local ln=$(_line "$1" 'START CONTENT'); ((ln++)); echo $ln; }
+function _last { local ln=$(_line "$1" 'END CONTENT'); ((ln--)); echo $ln; }
+function _extract {
+    local file=$(mktemp $TMPFILE)
+    awk 'FNR >= '$(_first $1)' && FNR <= '$(_last $1)'' $1 > $file
+    echo $file
+}
+
+SUBJECT=$(_subject $BASE/../email.html)
+PLAIN=$(_extract $BASE/../email_plain.html)
+HTML=$(_extract $BASE/../email.html)
+
+$BASE/mailto 'alister@vmware.com' "$SUBJECT" "$PLAIN" "$HTML"
+$BASE/mailto 'alister@different.com' "$SUBJECT" "$PLAIN" "$HTML"
+
+rm -f ${TMPFILE//[X]}*
