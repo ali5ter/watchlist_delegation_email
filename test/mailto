@@ -2,6 +2,8 @@
 # @file mailto
 # ☆  Cheesy test script to send a multipart email
 #    Tested on OSX 10.8.5 only
+#    Make sure to xonfigure postfix...
+# @see http://www.zenddeveloper.com/how-to-send-smtp-mails-with-postfix-mac-os-x-10-8/
 # @author Alister Lewis-Bowen <alister@vmware.com>
 # @usage mailto email subject plain_message_file html_message_file
 # @requires sendmail, md5

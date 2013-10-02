@@ -39,3 +39,4 @@ References
 [embedding images in HTML emails](http://www.campaignmonitor.com/blog/post/3927/embedded-images-in-html-email)
 [em to px conversion](http://pxtoem.com/)
 [rgb to hex color conversion](http://www.rgbtohex.net/)
+[setting up postfix on osx](http://www.zenddeveloper.com/how-to-send-smtp-mails-with-postfix-mac-os-x-10-8/)
