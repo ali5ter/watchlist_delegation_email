@@ -17,7 +17,9 @@ SUBJECT=$(_subject $BASE/../email.html)
 PLAIN=$(_extract $BASE/../email_plain.html)
 HTML=$(_extract $BASE/../email.html)
 
+$BASE/mailto 'alister@horton.localhost' "$SUBJECT" "$PLAIN" "$HTML"
 $BASE/mailto 'alister@vmware.com' "$SUBJECT" "$PLAIN" "$HTML"
-$BASE/mailto 'alister@different.com' "$SUBJECT" "$PLAIN" "$HTML"
+$BASE/mailto 'alister.lewisbowen@gmail.com' "$SUBJECT" "$PLAIN" "$HTML"
+$BASE/mailto 'alister_lewisbowen@yahoo.com' "$SUBJECT" "$PLAIN" "$HTML"
 
 rm -f ${TMPFILE//[X]}*

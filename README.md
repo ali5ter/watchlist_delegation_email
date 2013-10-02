@@ -32,11 +32,12 @@ However, why would we force Admin to open an attachement? Shouldn't we just prov
 
 References
 ----------
-[HTML Email best practices](http://24ways.org/2009/rock-solid-html-emails/)
-[more HTML Email best practices](http://net.tutsplus.com/tutorials/html-css-techniques/20-email-design-best-practices-and-resources-for-beginners/)
-[plain text best practices](http://www.campaignmonitor.com/guides/design/designing/)
-[mutipart/alternative email](http://kevinjmcmahon.net/articles/22/html-and-plain-text-multipart-email-/)
-[embedding images in HTML emails](http://www.campaignmonitor.com/blog/post/3927/embedded-images-in-html-email)
-[em to px conversion](http://pxtoem.com/)
-[rgb to hex color conversion](http://www.rgbtohex.net/)
-[setting up postfix on osx](http://www.zenddeveloper.com/how-to-send-smtp-mails-with-postfix-mac-os-x-10-8/)
+* [HTML Email best practices](http://24ways.org/2009/rock-solid-html-emails/)
+* [More HTML Email best practices](http://net.tutsplus.com/tutorials/html-css-techniques/20-email-design-best-practices-and-resources-for-beginners/)
+* [Plain text best practices](http://www.campaignmonitor.com/guides/design/designing/)
+* [Mutipart/alternative email](http://kevinjmcmahon.net/articles/22/html-and-plain-text-multipart-email-/)
+* [Embedding images in HTML emails](http://www.campaignmonitor.com/blog/post/3927/embedded-images-in-html-email)
+* [Em to px conversion](http://pxtoem.com/)
+* [RGB to hex color conversion](http://www.rgbtohex.net/)
+* [Setting up postfix on osx](http://www.zenddeveloper.com/how-to-send-smtp-mails-with-postfix-mac-os-x-10-8/)
+* [Email client popularity](http://www.campaignmonitor.com/resources/will-it-work/email-clients/)
