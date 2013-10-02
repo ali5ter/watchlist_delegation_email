@@ -21,5 +21,6 @@ $BASE/mailto 'alister@horton.localhost' "$SUBJECT" "$PLAIN" "$HTML"
 $BASE/mailto 'alister@vmware.com' "$SUBJECT" "$PLAIN" "$HTML"
 $BASE/mailto 'alister.lewisbowen@gmail.com' "$SUBJECT" "$PLAIN" "$HTML"
 $BASE/mailto 'alister_lewisbowen@yahoo.com' "$SUBJECT" "$PLAIN" "$HTML"
+$BASE/mailto 'ali5ter@comcast.net' "$SUBJECT" "$PLAIN" "$HTML"
 
 rm -f ${TMPFILE//[X]}*
