@@ -1,26 +1,48 @@
 #!/bin/bash
+# @file run
+# ☆  Run test emails using beacon email content designs
+#    Tested from OSX 10.8.5 only
+#    Make sure to configure postfix...
+# @see http://www.zenddeveloper.com/how-to-send-smtp-mails-with-postfix-mac-os-x-10-8/
+# @author Alister Lewis-Bowen <alister@vmware.com>
 
 BASE=$(dirname $0)
 TMPFILE=.run_beacon_email_test-XXXXXXXX
 
-function _subject { cat "$1" | grep 'Subject:' | sed -E 's#.*</span>(.*)</p>.*#\1#' ; }
 function _line { cat "$1" | grep -n "$2" | cut -f1 -d:; }
+
 function _first { local ln=$(_line "$1" 'START CONTENT'); ((ln++)); echo $ln; }
+
 function _last { local ln=$(_line "$1" 'END CONTENT'); ((ln--)); echo $ln; }
-function _extract {
+
+function _subject { cat "$1" | grep 'Subject:' | sed -E 's#.*</span>(.*)</p>.*#\1#' ; }
+
+function _content {
+    local _file=$(mktemp $TMPFILE)
     local file=$(mktemp $TMPFILE)
-    awk 'FNR >= '$(_first $1)' && FNR <= '$(_last $1)'' $1 > $file
+    awk 'FNR >= '$(_first $1)' && FNR <= '$(_last $1)'' $1 > $_file
+    sed -e 's/<img src="/<img src="cid:/g' $_file > $file
     echo $file
 }
 
-SUBJECT=$(_subject $BASE/../email.html)
-PLAIN=$(_extract $BASE/../email_plain.html)
-HTML=$(_extract $BASE/../email.html)
+function _images {
+    local imgs=''
+    for img in $(cat $1 | sed -n 's/.*<img src="\([^"]*\)".*/\1/p'); do
+        imgs=$imgs' '$BASE/../$img
+    done
+    echo $imgs | tr ' ' '\n' | sort -u | tr '\n' ' '
+}
 
-$BASE/mailto 'alister@horton.localhost' "$SUBJECT" "$PLAIN" "$HTML"
-$BASE/mailto 'alister@vmware.com' "$SUBJECT" "$PLAIN" "$HTML"
-$BASE/mailto 'alister.lewisbowen@gmail.com' "$SUBJECT" "$PLAIN" "$HTML"
-$BASE/mailto 'alister_lewisbowen@yahoo.com' "$SUBJECT" "$PLAIN" "$HTML"
-$BASE/mailto 'ali5ter@comcast.net' "$SUBJECT" "$PLAIN" "$HTML"
+SUBJECT=$(_subject $BASE/../email.html)
+IMAGES=$(_images $BASE/../email.html)
+PLAIN=$(_content $BASE/../email_plain.html)
+HTML=$(_content $BASE/../email.html)
+
+#$BASE/mailto 'alister@localhost' "$SUBJECT" "$PLAIN" "$HTML" "$IMAGES"
+$BASE/mailto 'alister@vmware.com' "$SUBJECT" "$PLAIN" "$HTML" "$IMAGES"
+#$BASE/mailto 'alister.lewisbowen@gmail.com' "$SUBJECT" "$PLAIN" "$HTML" "$IMAGES"
+#$BASE/mailto 'alister_lewisbowen@yahoo.com' "$SUBJECT" "$PLAIN" "$HTML" "$IMAGES"
+#$BASE/mailto 'ali5ter@comcast.net' "$SUBJECT" "$PLAIN" "$HTML" "$IMAGES"
+#$BASE/mailto 'test@ipersona.info' "$SUBJECT" "$PLAIN" "$HTML" "$IMAGES"
 
 rm -f ${TMPFILE//[X]}*

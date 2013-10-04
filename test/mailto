@@ -2,32 +2,67 @@
 # @file mailto
 # ☆  Cheesy test script to send a multipart email
 #    Tested on OSX 10.8.5 only
-#    Make sure to xonfigure postfix...
+#    Make sure to configure postfix...
 # @see http://www.zenddeveloper.com/how-to-send-smtp-mails-with-postfix-mac-os-x-10-8/
 # @author Alister Lewis-Bowen <alister@vmware.com>
-# @usage mailto email subject plain_message_file html_message_file
-# @requires sendmail, md5
+# @usage mailto email subject plain_message_file html_message_file [png_image_files] ... email plain test/html message and optional png images
 
-RECIPIENT=$1
-SUBJECT=${2:-Test e-mail}
-PLAIN=${3:-plain}
-HTML=${4:-html}
+RECIPIENT=$1; shift
+SUBJECT=${1:-Test e-mail}; shift
+PLAIN=${1:-plain}; shift
+HTML=${1:-html}; shift
+IMAGES=${*:-'glyphicons_010_envelope.png glyphicons_139_phone.png'}
 BOUNDARY=$(md5 -q -s 'cheezy_email_script')
+TMPFILE=.mailto-XXXXXXXX
+
+function _encodeImg {
+    local _data=$(mktemp $TMPFILE)
+    local _img=$(basename $1)
+    cat $1 | uuencode -m $_img > $_data
+    sed -i -e '1,1d' $_data
+    sed -i -e '$d' $_data
+    echo $(cat $_data)
+}
+
+function _img {
+    local _img=$(basename $1)
+    echo "Content-Type: image/png; name=\"$_img\""
+    echo 'Content-Transfer-Encoding: base64'
+    echo "Content-Disposition: attachment; filename=\"$_img\";"
+    echo ''
+    echo "$(_encodeImg $1)"
+    echo ''
+}
 
 (
  echo 'From: test@somedomain.com'
  echo 'Reply-To: donotreply@somedomain.com'
  echo "To: $RECIPIENT"
  echo "Subject: $SUBJECT"
+ echo 'X-Category: Beacon alert delegation'
  echo 'MIME-Version: 1.0'
- echo "Content-Type: multipart/alternative; boundary=$BOUNDARY"
+ echo 'Content-Type: multipart/alternative;'
+ echo "        boundary=$BOUNDARY"
+ echo ''
+ echo 'This is a MIME-encapsulated message.'
+ echo ''
+ echo "--$BOUNDARY"
+ echo 'Content-Description: Beacon alert delegation'
+ echo 'Content-Type: text/plain; charset="us-ascii"'
  echo ''
  echo "$(cat $PLAIN)"
  echo ''
  echo "--$BOUNDARY"
+ echo 'Content-Description: Beacon alert delegation'
  echo 'Content-Type: text/html; charset="utf-8"'
  echo ''
  echo "$(cat $HTML)"
  echo ''
+ for img in $IMAGES; do
+    echo "--$BOUNDARY"
+    _img $img
+ done
  echo "--$BOUNDARY--"
 ) | sendmail -t
+
+rm -f ${TMPFILE//[X]}*

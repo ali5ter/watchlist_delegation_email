@@ -1,1 +1,4 @@
-<h1>HTML text message</h1>
+<strong>HTML message</strong>
+<hr/>
+<p><img src="glyphicons_139_phone.png" alt="Phone:"/> 0123 456-7890</p>
+<p><img src="glyphicons_139_envelope.png" alt="E-mail:"/> person@domain.tld</p>
