@@ -16,7 +16,7 @@ This plain text version can also be sent with the HTML version in the multipart 
 Testing
 -------
 The run script in the test directory will:
-1. Create a mutipart smtp message with both plain and html versions of the email message
+1. Create a multipart smtp message with both plain and html versions of the email message
 2. Encode the png images and add these to the multipart smtp message
 3. Update the HTML content to refer to these attachments using the cid: URI Scheme
 4. Send this multipart smtp message to a set of test email addreses associated with different email clients
