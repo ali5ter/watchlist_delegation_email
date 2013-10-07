@@ -5,30 +5,21 @@ An admin can delegate the action on a VM alert via email.
 
 The email should reflect the alert details, the VM and any bookmarked solutions (KB Articles & web pages).
 
-The run script in the test directory will send the html and plain content via email.
-
 HTML email (email.html)
 -----------------------
-Formatted so that:
-* Table, not CSS, layout
-* Simple in-line styles only
-* No background images
-* No image sizing
-* Alt attributes on all images
-
-Images will either have to be served off vmware.com so they're accessible to external customers or we have to embed them.
-
-It is safer to create mutipart mime email bodies that containt a plain text alternative to the HTML email but not sure how we do that from our smartphone email clients.
+HTML written to render in as many clients as possible using current best practices. Images could be served off vmware.com but chosen to attache them as part of the mutipart message and use cid: URI scheme to refer to image attachements from within the HTML.
 
 Plain-text email (email_plain.html)
 -----------------------------------
-Works in all email clients but need to include links which could become very long.
+This plain text version can also be sent with the HTML version in the multipart smtp message.
 
-Attachment email (email_attachment.html)
-----------------------------------------
-Could attach an HTML version of the email and provide plain-text overview.
-
-However, why would we force Admin to open an attachement? Shouldn't we just provide decent plain-text version?
+Testing
+-------
+The run script in the test directory will:
+1. Create a mutipart smtp message with both plain and html versions of the email message
+2. Encode the png images and add these to the multipart smtp message
+3. Update the HTML content to refer to these attachments using the cid: URI Scheme
+4. Send this multipart smtp message to a set of test email addreses associated with different email clients
 
 References
 ----------
