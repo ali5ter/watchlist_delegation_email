@@ -26,6 +26,7 @@ function _encodeImg {
 
 function _img {
     local _img=$(basename $1)
+    echo "Content-ID: <$_img>"
     echo "Content-Type: image/png; name=\"$_img\""
     echo 'Content-Transfer-Encoding: base64'
     echo "Content-Disposition: attachment; filename=\"$_img\";"

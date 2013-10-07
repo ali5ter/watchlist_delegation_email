@@ -40,7 +40,7 @@ HTML=$(_content $BASE/../email.html)
 
 #$BASE/mailto 'alister@localhost' "$SUBJECT" "$PLAIN" "$HTML" "$IMAGES"
 $BASE/mailto 'alister@vmware.com' "$SUBJECT" "$PLAIN" "$HTML" "$IMAGES"
-#$BASE/mailto 'alister.lewisbowen@gmail.com' "$SUBJECT" "$PLAIN" "$HTML" "$IMAGES"
+$BASE/mailto 'alister.lewisbowen@gmail.com' "$SUBJECT" "$PLAIN" "$HTML" "$IMAGES"
 #$BASE/mailto 'alister_lewisbowen@yahoo.com' "$SUBJECT" "$PLAIN" "$HTML" "$IMAGES"
 #$BASE/mailto 'ali5ter@comcast.net' "$SUBJECT" "$PLAIN" "$HTML" "$IMAGES"
 #$BASE/mailto 'test@ipersona.info' "$SUBJECT" "$PLAIN" "$HTML" "$IMAGES"

@@ -32,6 +32,9 @@ However, why would we force Admin to open an attachement? Shouldn't we just prov
 
 References
 ----------
+* [Multipart MIME](http://www.w3.org/Protocols/rfc1341/7_2_Multipart.html)
+* [URI Scheme of cid:](http://en.wikipedia.org/wiki/URI_scheme)
+* [CID RFC](http://tools.ietf.org/html/rfc2392)
 * [HTML Email best practices](http://24ways.org/2009/rock-solid-html-emails/)
 * [More HTML Email best practices](http://net.tutsplus.com/tutorials/html-css-techniques/20-email-design-best-practices-and-resources-for-beginners/)
 * [Plain text best practices](http://www.campaignmonitor.com/guides/design/designing/)
