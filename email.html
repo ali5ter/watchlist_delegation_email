@@ -25,156 +25,83 @@
     <tr>
         <td>
             <table align="center" cellpadding="0" cellspacing="0" style="display: block; max-width: 600px">
-
                 <tr>
-                    <td width="8" height="1"></td> <!-- padding-left: .5em -->
-                    <td width="40" height="1"></td> <!-- width: 2.5em -->
+                    <td width="120" height="1"></td>
                     <td height="1"></td>
-                    <td width="44" height="1"></td> <!-- width: 2.75em-->
-                    <td width="8" height="1"></td> <!-- padding-right: .5em -->
                 </tr>
 
-                <!-- ## START ALERT -->
-                <tr><td colspan="5" height="3" style="background-color: #ccc"></td></tr> <!-- border-top: solid 3px rbg(204, 204, 204) -->
-                <tr><td colspan="5" height="9" ></td></tr> <!-- padding: .5em -->
-                <!-- ## alert priority, name, date -->
-                <tr>
-                    <td valign="top" colspan="2" align="center">
-                        <img src="DetailsAnomaliesRed.png" style="display: block;" alt="error"/>
-                    </td>
-                    <td valign="top" style="font-family: sans-serif; font-size: 1em; line-height: 1.2em; color: #222">
-                        VM Memory Usage is above 95% for 10 minutes
-                    </td>
-                    <td valign="top" colspan="2" align="left" style="font-family: sans-serif; font-size: .8em; line-height: 1.4em; color: #aaa">
-                        3:42 PM
-                    </td>
-                </tr>
-                <tr><td colspan="5" height="3" ></td></tr> <!-- padding: .2em -->
-                <!-- ## alert description -->
-                <tr>
-                    <td colspan="2"></td>
-                    <td colspan="3" style="font-family: sans-serif; font-size: .8em; line-height: 1.4em; color: #888">
-                        Default alarm to monitor virtual machine memory usage
-                    </td>
-                </tr>
-                <tr><td colspan="5" height="3" ></td></tr> <!-- padding: .2em -->
-                <!-- ## alert vm -->
-                <tr>
-                    <td colspan="2"></td>
-                    <td colspan="3" style="font-family: sans-serif; font-size: .8em; font-weight: bold; line-height: 1.4em; color: #222">
-                        <span>VM: </span><a href="#" style="font-weight: bold; color:#39c">
-                            acme-123456-FOO0042
-                        </a>
-                    </td>
-                </tr>
-                <tr><td colspan="5" height="9" ></td></tr> <!-- padding: .5em -->
+                <!-- ## Alert -->
 
-                <!-- ## START SOLUTION - kb article -->
-                <tr><td colspan="5" height="1" style="background-color: #ccc"></td></tr> <!-- border-top: solid 1px rbg(204, 204, 204) -->
                 <tr>
-                    <td colspan="2" rowspan="2" valign="top" align="center">
-                        <img src="redBookmark.png" width="17" style="display: block;" alt="bookmark"/>
-                    </td>
-                    <td colspan="3" height="9" ></td> <!-- padding: .5em -->
-                </tr>
-                <!-- ## article link -->
-                <tr>
-                    <td valign="top" colspan="3" style="font-family: sans-serif; font-size: .8em; line-height: 1.2em; color: #222">
-                        <a href="#" style="font-weight: bold; color:#39c">
-                            Configuring Coriad EtherDrive SAN aplicances and deploying with ESXi 5.x (Partner Support) (1031322)
-                        </a>
-                    </td>
-                </tr>
-                <tr><td colspan="5" height="9" ></td></tr> <!-- padding: .5em -->
-                <!-- ## article quote -->
-                <tr>
-                    <td></td>
-                    <td colspan="4" height="9" style="background-color: #a6d7ff"></td> <!-- padding: .5em -->
+                    <td valign="top">Alert:</td>
+                    <td valign="top" style="color: red;">VM Memory Usage is above 95% for 10 minutes</td>
                 </tr>
                 <tr>
-                    <td></td>
-                    <td valign="top" align="center" style="background-color: #a6d7ff">
-                        <img src="icon_quote.png" width="17" style="display: block;" alt="quotation"/>
-                    </td>
-                    <td colspan="2" valign="top" style="background-color: #a6d7ff; font-family: sans-serif; font-size: .8em; font-style: italic; line-height: 1.2em; color: #666">
-                        All LUNs being presented to an ESX Server host (VMFS and RDM). Any capacity larger than the limit is not handled. The LUN may not be presented as a choice for a data store in the Virtual Infrastructure or vSphere Client. All LUNs being presented to an ESX Server host (VMFS and RDM).
-                    </td>
-                    <td style="background-color: #a6d7ff"></td>
+                    <td valign="top">VM:</td>
+                    <td valign="top">acme-123456-FOO0042</td>
                 </tr>
                 <tr>
-                    <td></td>
-                    <td colspan="4" height="9" style="background-color: #a6d7ff"></td> <!-- padding: .5em -->
+                    <td valign="top">Severity:</td>
+                    <td valign="top">Critical</td>
                 </tr>
-                <tr><td colspan="5" height="9" ></td></tr> <!-- padding: .5em -->
+                <tr>
+                    <td valign="top">Date:</td>
+                    <td valign="top">October 08, 11:38:41 AM PDT</td>
+                </tr>
+                <tr><td colspan="2" height="18px"></td></tr>
+                <tr><td colspan="2" valign="top">Default alarm to monitor virtual machine memory usage</td></tr>
+                <tr><td colspan="2" height="18px"></td></tr>
+                <tr><td colspan="2" valign="top"><a href="#">View in Beacon</a></tr>
+                <tr><td colspan="2" height="18px"></td></tr>
+                <tr><td colspan="2" valign="top"><a href="#">View in vSphere Web Client</a></tr>
+                <tr><td colspan="2" height="18px"></td></tr>
 
-                <!-- ## START SOLUTION - web page -->
-                <tr><td colspan="5" height="1" style="background-color: #ccc"></td></tr> <!-- border-top: solid 1px rbg(204, 204, 204) -->
-                <tr>
-                    <td colspan="2" rowspan="2" valign="top" align="center">
-                        <img src="redBookmark.png" width="17" style="display: block;" alt="bookmark"/>
-                    </td>
-                    <td colspan="3" height="9" ></td> <!-- padding: .5em -->
-                </tr>
-                <!-- ## web page link -->
-                <tr>
-                    <td valign="top" colspan="3" style="font-family: sans-serif; font-size: .8em; line-height: 1.2em; color: #222">
-                        <a href="#" style="font-weight: bold; color:#39c">
-                            The Compatibility Guides are now updated with VSAN and vFlash info!
-                        </a>
-                    </td>
-                </tr>
-                <tr><td colspan="5" height="9" ></td></tr> <!-- padding: .5em -->
+                <!-- ## Related Objects -->
 
-                <!-- ## end alert -->
-                <tr><td colspan="5" height="9" ></td></tr> <!-- padding: .5em -->
+                <tr><td colspan="2" valign="top" style="font-weight: bold;">Related Objects</td></tr>
+                <tr><td colspan="2" height="18px"></td></tr>
+                <tr>
+                    <td valign="top">Virtual Center:</td>
+                    <td valign="top">ue-server.eng.vmware.com</td>
+                </tr>
+                <tr>
+                    <td valign="top">Cluster:</td>
+                    <td valign="top">ue-cluster-02</td>
+                </tr>
+                <tr>
+                    <td valign="top">Host:</td>
+                    <td valign="top">ue-host-07</td>
+                </tr>
+                <tr>
+                    <td valign="top"></td>
+                    <td valign="top" style="color: red;">Big honking alert on this host</td>
+                </tr>
+                <tr>
+                    <td valign="top">Resource Pool:</td>
+                    <td valign="top">ue-critical</td>
+                </tr>
+                <tr>
+                    <td valign="top">Datastore:</td>
+                    <td valign="top">storage-007</td>
+                </tr>
+                <tr><td colspan="2" height="18px"></td></tr>
 
-                <!-- ## START ALERT -->
-                <tr><td colspan="5" height="3" style="background-color: #ccc"></td></tr> <!-- border-top: solid 3px rbg(204, 204, 204) -->
-                <tr><td colspan="5" height="9" ></td></tr> <!-- padding: .5em -->
-                <!-- alert priority, name, date -->
-                <tr>
-                    <td valign="top" colspan="2" align="center">
-                        <img src="DetailsAnomaliesYellow.png" style="display: block;" alt="warning"/>
-                    </td>
-                    <td valign="top" style="font-family: sans-serif; font-size: 1em; line-height: 1.2em; color: #222">
-                        Capacity over limit
-                    </td>
-                    <td valign="top" colspan="2" align="left" style="font-family: sans-serif; font-size: .8em; line-height: 1.4em; color: #aaa">
-                        2:42 PM
-                    </td>
-                </tr>
-                <tr><td colspan="5" height="3" ></td></tr> <!-- padding: .2em -->
-                <!-- ## alert vm -->
-                <tr>
-                    <td colspan="2"></td>
-                    <td colspan="3" style="font-family: sans-serif; font-size: .8em; font-weight: bold; line-height: 1.4em; color: #222">
-                        <span>VM: </span><a href="#" style="font-weight: bold; color:#39c">
-                            acme-78901-BAA0042
-                        </a>
-                    </td>
-                </tr>
-                <tr><td colspan="5" height="9" ></td></tr> <!-- padding: .5em -->
+                <!-- ## Solutions -->
 
-                <!-- ## START SOLUTION - kb article -->
-                <tr><td colspan="5" height="1" style="background-color: #ccc"></td></tr> <!-- border-top: solid 1px rbg(204, 204, 204) -->
-                <tr>
-                    <td colspan="2" rowspan="2" valign="top" align="center">
-                        <img src="redBookmark.png" width="17" style="display: block;" alt="bookmark"/>
-                    </td>
-                    <td colspan="3" height="9" ></td> <!-- padding: .5em -->
-                </tr>
-                <!-- ## article link -->
-                <tr>
-                    <td valign="top" colspan="3" style="font-family: sans-serif; font-size: .8em; line-height: 1.2em; color: #222">
-                        <a href="#" style="font-weight: bold; color:#39c">
-                            Troubleshooting a LUN that is extended in size past the 2TB/2047GB limit(1004230)
-                        </a>
-                    </td>
-                </tr>
-                <tr><td colspan="5" height="9" ></td></tr> <!-- padding: .5em -->
-                <!-- ## end alert -->
-                <tr><td colspan="5" height="9" ></td></tr> <!-- padding: .5em -->
+                <tr><td colspan="2" valign="top" style="font-weight: bold;">Related Articles:</td></tr>
+                <tr><td colspan="2" height="18px"></td></tr>
 
+                <!-- ## KB Article -->
+
+                <tr><td colspan="2" valign="top"><a href="#">Troubleshooting ESX/ESXi virtual machine performance issues</a></td></tr>
+                <tr><td colspan="2" valign="top"><span style="color: green;">VMware Knowledge Base</span> - This article provides information on isolating a performance issue on ESX/ESXi. Bad performance can be caused by several different areas: CPU constraints, memory overcommitment, storage latency, or network latenc</td></tr>
+                <tr><td colspan="2" valign="top" style="font-style: italic;">&ldquo;All LUNs being presented to an ESX Server host (VMFS and RDM). Any capacity larger than the limit is not handled. The LUN may not be presented as a choice for a data store in the Virtual Infrastructure or vSphere Client. All LUNs being presented to an ESX Server host (VMFS and RDM).&rdquo;</td></tr>
+                <tr><td colspan="2" height="18px"></td></tr>
+
+                <!-- ## Web Article -->
+
+                <tr><td colspan="2" valign="top"><a href="#">The Compatibility Guides are now updated with VSAN and vFlash info!</a></td></tr>
+                <tr><td colspan="2" valign="top"><span style="color: green;">www.yellow-bricks.com</span> - For those wanting to play with Virtual SAN (VSAN) and vSphere Flash Read Cache (vFRC / vFlash), the compatibility guides are being updated ...</td></tr>
             </table>
         </td>
     </tr>

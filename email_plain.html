@@ -21,43 +21,37 @@
         <p class="sig">-- Bob Blogs, Head Admin, Acme Inc.</p>
         <pre>
         <!-- START CONTENT FOR BRIAN & CHITONG... plain and simple -->
-============================
-ERROR Alert: VM Memory Usage is above 95% for 10 minutes
 
-Occured at: 3:42 PM
+Alert:      VM Memory Usage is above 95% for 10 minutes
+VM:         acme-123456-FOO0042
+Severity:   Critical
+Date:       October 08, 11:38:41 AM PDT
 
-Description: Default alarm to monitor virtual machine memory usage
+Default alarm to monitor virtual machine memory usage
 
-Occurred on VM: acme-123456-FOO0042
+View in Beacon: beacon://26dca829-afe0-4221-b245-921df6dbb2c5
+View in vSphere Web Client: https://vc-01.acme.com:9443/vsphere-client/#extensionId=vsphere.core.vm.manage.settings.vmHardwareView;context=com.vmware.core.model%3A%3AServerObjectRef~04BCB1EA-D98B-4015-8579-52FCCB30C999%3AVirtualMachine%3Avm-898~core
 
-VM link: https://vc-01.acme.com:9443/vsphere-client/#extensionId=vsphere.core.vm.manage.settings.vmHardwareView;context=com.vmware.core.model%3A%3AServerObjectRef~04BCB1EA-D98B-4015-8579-52FCCB30C999%3AVirtualMachine%3Avm-898~core
+Related Objects
+---------------
 
-----------------------------
-Suggested KB Article: Configuring Coriad EtherDrive SAN aplicances and deploying with ESXi 5.x (Partner Support) (1031322)
+Virtual Center: ue-server.eng.vmware.com
+Cluster:        ue-cluster-02
+Host:           ue-host-07
+Resource Pool:  ue-critical
+Datastore:      storage-007
 
-Article link: http://kb.vmware.com/kb/1031322
+Related Articles:
+-----------------
 
+Troubleshooting ESX/ESXi virtual machine performance issues
+VMware Knowledge Base - This article provides information on isolating a performance issue on ESX/ESXi. Bad performance can be caused by several different areas: CPU constraints, memory overcommitment, storage latency, or network latenc
 Quote: All LUNs being presented to an ESX Server host (VMFS and RDM). Any capacity larger than the limit is not handled. The LUN may not be presented as a choice for a data store in the Virtual Infrastructure or vSphere Client. All LUNs being presented to an ESX Server host (VMFS and RDM).
+Link: http://kb.vmware.com/kb/2001003
 
-----------------------------
-Suggested web page: The Compatibility Guides are now updated with VSAN and vFlash info!
-
-Page link: http://www.yellow-bricks.com/2013/09/23/the-compatibility-guides-are-now-updated-with-vsan-and-vflash-info/
-
-
-============================
-WARNING Alert: Capacity over limit
-
-Occured at: 2:42 PM
-
-Occurred on VM: acme-78901-BAA0042
-
-VM link: https://vc-01.acme.com:9443/vsphere-client/#extensionId=vsphere.core.vm.manage.settings.vmHardwareView;context=com.vmware.core.model%3A%3AServerObjectRef~04BCB1EA-D98B-4015-8579-52FCCB30C999%3AVirtualMachine%3Avm-898~core
-
-----------------------------
-Suggested KB Article: Troubleshooting a LUN that is extended in size past the 2TB/2047GB limit(1004230)
-
-Article link: http://kb.vmware.com/kb/1004230
+The Compatibility Guides are now updated with VSAN and vFlash info!
+www.yellow-bricks.com - For those wanting to play with Virtual SAN (VSAN) and vSphere Flash Read Cache (vFRC / vFlash), the compatibility guides are being updated ...
+Link: http://www.yellow-bricks.com/2013/09/23/the-compatibility-guides-are-now-updated-with-vsan-and-vflash-info/
         <!-- END CONTENT FOR BRIAN & CHITONG -->
         </pre>
         <script src="js/vendor/jquery-1.9.1.min.js"></script>
