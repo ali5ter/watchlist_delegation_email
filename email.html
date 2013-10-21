@@ -4,10 +4,14 @@
         <title>Email Delegation</title>
         <style>
         html { background: rgba(0,0,0,0); color: #222; font-family: sans-serif; font-size: 1em; line-height: 1.4; }
-        .email_header p { margin: 0; padding: .6em 0 .6em .5em; border-bottom: solid 1px #ccc; }
+        .email_header p { margin: 0; padding: .6em 0 .6em .5em; border-bottom: solid 1px #ccc; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
         .email_header p > span { color: gray; }
         .cursor { background: rgb(0,128,255); margin-top: .5em; margin-left: .5em; height: 1.2em; width: .2em; }
         .sig { font-size: 1em; margin: 0; padding: .6em 0 1em .5em; }
+        .no_phone table table { border: 1px solid #ddd; padding: 0 .5em; }
+        .no_phone .email_header,
+        .no_phone .cursor,
+        .no_phone .sig { display: none; }
         </style>
     </head>
     <body>
@@ -112,16 +116,11 @@
         <script>
 
 $(document).ready(function() {
-        'use strict';
-        if ($('.content').length === 0) {  // when viewed outside of container
-            $('table table').css({
-                'border': '1px solid #ddd',
-                'padding': '0 .5em'
-            });
-            $('.email_header').hide();
-            $('.cursor').hide();
-            $('.sig').hide();
-        }
+    'use strict';
+
+    if ($('.content').length === 0) {  // when viewed outside of container
+        $('body').toggleClass('no_phone');
+    }
 });
 
         </script>
