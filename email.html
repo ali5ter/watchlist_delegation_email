@@ -9,7 +9,7 @@
         .cursor { background: rgb(0,128,255); margin-top: .8em; margin-left: .8em; height: 1.2em; width: .1em; }
         .sig { font-size: 1em; margin: 0 0 0 .8em; padding: .8em .8em .8em 0; }
         table { margin: 0; padding: .8em; }
-        .no_phone table table { border: 1px solid #ddd; padding: 0 .5em; }
+        .no_phone > table { padding: 0 .5em; }
         .no_phone .email_header,
         .no_phone .cursor,
         .no_phone .sig { display: none; }
@@ -27,29 +27,31 @@
 <table width="100%" height="100%" border="0" cellspacing="0" cellpadding="0">
     <tr>
         <td>
+            <!-- ## Alert -->
+
             <table cellpadding="0" cellspacing="0" style="display: block; max-width: 600px">
                 <tr>
-                    <td width="120" height="1"></td>
+                    <td width="80" height="1"></td>
                     <td height="1"></td>
                 </tr>
-
-                <!-- ## Alert -->
-
                 <tr>
-                    <td valign="top" style="font-family: sans-serif;">Alert:</td>
+                    <td valign="top" style="font-family: sans-serif; color: gray">Alert:</td>
                     <td valign="top" style="font-family: sans-serif; color: red;">VM Memory Usage is above 95% for 10 minutes</td>
                 </tr>
+                <tr><td colspan="2" height="4px"></td></tr>
                 <tr>
-                    <td valign="top" style="font-family: sans-serif;">VM:</td>
-                    <td valign="top" style="font-family: sans-serif;">acme-123456-FOO0042</td>
+                    <td valign="top" style="font-family: sans-serif; color: gray">VM:</td>
+                    <td valign="top" style="font-family: sans-serif; font-weight: bold;">acme-123456-FOO0042</td>
                 </tr>
+                <tr><td colspan="2" height="4px"></td></tr>
                 <tr>
-                    <td valign="top" style="font-family: sans-serif;">Severity:</td>
+                    <td valign="top" style="font-family: sans-serif; color: gray">Severity:</td>
                     <td valign="top" style="font-family: sans-serif;">Critical</td>
                 </tr>
+                <tr><td colspan="2" height="4px"></td></tr>
                 <tr>
-                    <td valign="top" style="font-family: sans-serif;">Date:</td>
-                    <td valign="top" style="font-family: sans-serif;">October 08, 11:38:41 AM PDT</td>
+                    <td valign="top" style="font-family: sans-serif; color: gray">Date:</td>
+                    <td valign="top" style="font-family: sans-serif;">Friday, October 18, 2013 at 6:42:12 AM EDT</td>
                 </tr>
                 <tr><td colspan="2" height="18px"></td></tr>
                 <tr><td colspan="2" valign="top" style="font-family: sans-serif;">Default alarm to monitor virtual machine memory usage</td></tr>
@@ -58,53 +60,71 @@
                 <tr><td colspan="2" height="18px"></td></tr>
                 <tr><td colspan="2" valign="top" style="font-family: sans-serif;"><a href="#">View in vSphere Web Client</a></tr>
                 <tr><td colspan="2" height="18px"></td></tr>
+            </table>
 
-                <!-- ## Related Objects -->
+            <!-- ## Related Objects -->
+
+            <table cellpadding="0" cellspacing="0" style="display: block; max-width: 600px">
+                <tr>
+                    <td width="130" height="1"></td>
+                    <td height="1"></td>
+                </tr>
 
                 <tr><td colspan="2" valign="top" style="font-family: sans-serif; font-weight: bold;">Related Objects</td></tr>
                 <tr><td colspan="2" height="18px"></td></tr>
                 <tr>
-                    <td valign="top" style="font-family: sans-serif;">Virtual Center:</td>
+                    <td valign="top" style="font-family: sans-serif; color: gray">Virtual Center:</td>
                     <td valign="top" style="font-family: sans-serif;">ue-server.eng.vmware.com</td>
                 </tr>
+                <tr><td colspan="2" height="10px"></td></tr>
                 <tr>
-                    <td valign="top" style="font-family: sans-serif;">Cluster:</td>
+                    <td valign="top" style="font-family: sans-serif; color: gray">Cluster:</td>
                     <td valign="top" style="font-family: sans-serif;">ue-cluster-02</td>
                 </tr>
+                <tr><td colspan="2" height="10px"></td></tr>
                 <tr>
-                    <td valign="top" style="font-family: sans-serif;">Host:</td>
+                    <td valign="top" style="font-family: sans-serif; color: gray">Host:</td>
                     <td valign="top" style="font-family: sans-serif;">ue-host-07</td>
                 </tr>
                 <tr>
-                    <td valign="top"></td>
-                    <td valign="top" style="font-family: sans-serif; color: red;">Big honking alert on this host</td>
+                    <td colspan="2" valign="top" style="font-family: sans-serif; color: red;">&nbsp;&nbsp;Big honking alert on this host</td>
                 </tr>
+                <tr><td colspan="2" height="10px"></td></tr>
                 <tr>
-                    <td valign="top" style="font-family: sans-serif;">Resource Pool:</td>
+                    <td valign="top" style="font-family: sans-serif; color: gray">Resource Pool:</td>
                     <td valign="top" style="font-family: sans-serif;">ue-critical</td>
                 </tr>
+                <tr><td colspan="2" height="10px"></td></tr>
                 <tr>
-                    <td valign="top" style="font-family: sans-serif;">Datastore:</td>
+                    <td valign="top" style="font-family: sans-serif; color: gray">Network:</td>
+                    <td valign="top" style="font-family: sans-serif;">VM Network</td>
+                </tr>
+                <tr><td colspan="2" height="10px"></td></tr>
+                <tr>
+                    <td valign="top" style="font-family: sans-serif; color: gray">Datastore:</td>
                     <td valign="top" style="font-family: sans-serif;">storage-007</td>
                 </tr>
                 <tr><td colspan="2" height="18px"></td></tr>
+            </table>
 
-                <!-- ## Solutions -->
+            <!-- ## Solutions -->
 
-                <tr><td colspan="2" valign="top" style="font-family: sans-serif; font-weight: bold;">Related Articles:</td></tr>
-                <tr><td colspan="2" height="18px"></td></tr>
+            <table cellpadding="0" cellspacing="0" style="display: block; max-width: 600px">
+
+                <tr><td valign="top" style="font-family: sans-serif; font-weight: bold;">Related Articles:</td></tr>
+                <tr><td height="18px"></td></tr>
 
                 <!-- ## KB Article -->
 
-                <tr><td colspan="2" valign="top" style="font-family: sans-serif;"><a href="#">Troubleshooting ESX/ESXi virtual machine performance issues</a></td></tr>
-                <tr><td colspan="2" valign="top" style="font-family: sans-serif;"><span style="color: green;">VMware Knowledge Base</span> - This article provides information on isolating a performance issue on ESX/ESXi. Bad performance can be caused by several different areas: CPU constraints, memory overcommitment, storage latency, or network latenc</td></tr>
-                <tr><td colspan="2" valign="top" style="font-family: sans-serif; font-style: italic;">&ldquo;All LUNs being presented to an ESX Server host (VMFS and RDM). Any capacity larger than the limit is not handled. The LUN may not be presented as a choice for a data store in the Virtual Infrastructure or vSphere Client. All LUNs being presented to an ESX Server host (VMFS and RDM).&rdquo;</td></tr>
-                <tr><td colspan="2" height="18px"></td></tr>
+                <tr><td valign="top" style="font-family: sans-serif;"><a href="#">Troubleshooting ESX/ESXi virtual machine performance issues</a></td></tr>
+                <tr><td valign="top" style="font-family: sans-serif;"><span style="color: green;">VMware Knowledge Base</span> - This article provides information on isolating a performance issue on ESX/ESXi. Bad performance can be caused by several different areas: CPU constraints, memory overcommitment, storage latency, or network latenc</td></tr>
+                <tr><td valign="top" style="font-family: sans-serif; font-style: italic;">&ldquo;All LUNs being presented to an ESX Server host (VMFS and RDM). Any capacity larger than the limit is not handled. The LUN may not be presented as a choice for a data store in the Virtual Infrastructure or vSphere Client. All LUNs being presented to an ESX Server host (VMFS and RDM).&rdquo;</td></tr>
+                <tr><td height="18px"></td></tr>
 
                 <!-- ## Web Article -->
 
-                <tr><td colspan="2" valign="top" style="font-family: sans-serif;"><a href="#">The Compatibility Guides are now updated with VSAN and vFlash info!</a></td></tr>
-                <tr><td colspan="2" valign="top" style="font-family: sans-serif;"><span style="color: green;">www.yellow-bricks.com</span> - For those wanting to play with Virtual SAN (VSAN) and vSphere Flash Read Cache (vFRC / vFlash), the compatibility guides are being updated ...</td></tr>
+                <tr><td valign="top" style="font-family: sans-serif;"><a href="#">The Compatibility Guides are now updated with VSAN and vFlash info!</a></td></tr>
+                <tr><td valign="top" style="font-family: sans-serif;"><span style="color: green;">www.yellow-bricks.com</span> - For those wanting to play with Virtual SAN (VSAN) and vSphere Flash Read Cache (vFRC / vFlash), the compatibility guides are being updated ...</td></tr>
             </table>
         </td>
     </tr>
