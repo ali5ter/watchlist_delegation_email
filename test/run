@@ -38,11 +38,12 @@ IMAGES=$(_images $BASE/../email.html)
 PLAIN=$(_content $BASE/../email_plain.html)
 HTML=$(_content $BASE/../email.html)
 
-#$BASE/mailto 'alister@localhost' "$SUBJECT" "$PLAIN" "$HTML" "$IMAGES"
-$BASE/mailto 'alister@vmware.com' "$SUBJECT" "$PLAIN" "$HTML" "$IMAGES"
-$BASE/mailto 'alister.lewisbowen@gmail.com' "$SUBJECT" "$PLAIN" "$HTML" "$IMAGES"
-#$BASE/mailto 'alister_lewisbowen@yahoo.com' "$SUBJECT" "$PLAIN" "$HTML" "$IMAGES"
-#$BASE/mailto 'ali5ter@comcast.net' "$SUBJECT" "$PLAIN" "$HTML" "$IMAGES"
-#$BASE/mailto 'test@ipersona.info' "$SUBJECT" "$PLAIN" "$HTML" "$IMAGES"
+#$BASE/mailto 'alister@localhost' "$SUBJECT" "$PLAIN" "$HTML" "$IMAGES"              # text based mail client
+$BASE/mailto 'alister@vmware.com' "$SUBJECT" "$PLAIN" "$HTML" "$IMAGES"             # zimbra client
+#$BASE/mailto 'alister.lewisbowen@gmail.com' "$SUBJECT" "$PLAIN" "$HTML" "$IMAGES"   # gmail client
+#$BASE/mailto 'alister_lewisbowen@yahoo.com' "$SUBJECT" "$PLAIN" "$HTML" "$IMAGES"   # yahoo client
+#$BASE/mailto 'ali5ter@comcast.net' "$SUBJECT" "$PLAIN" "$HTML" "$IMAGES"            # comcast client
+#$BASE/mailto 'test@ipersona.info' "$SUBJECT" "$PLAIN" "$HTML" "$IMAGES"             # firebird
+# TODO: Need more desktop clients like Outlook, OSX Mail, etc.
 
 rm -f ${TMPFILE//[X]}*
