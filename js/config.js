@@ -1,14 +1,14 @@
 var config = {
     'container': {  // the image representing the desktop & wizard chrome
         'color': '#fff',
-        'height': '749px',
-        'width': '383px',
+        'height': '774px',
+        'width': '374px',
         'top': '0'
     },
     'content': {    // the area in the wizard chrome to be populated
-        'height': '414',
-        'width': '318px',
-        'x': '34px',
-        'y': '185px'
+        'height': '504px',
+        'width': '320px',
+        'x': '26px',
+        'y': '166px'
     }
 }
