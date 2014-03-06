@@ -1,9 +1,9 @@
 Beacon Delegation Email
 =======================
 
-An admin can delegate the action on a VM alert via email.
+An admin can delegate the action on a Host alert via email.
 
-The email should reflect the alert details, the VM and any bookmarked solutions (KB Articles & web pages).
+The email should reflect the alert details, the Host and any bookmarked solutions (KB Articles & web pages).
 
 HTML email (email.html)
 -----------------------
