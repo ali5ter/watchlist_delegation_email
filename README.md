@@ -1,28 +1,27 @@
-Beacon Delegation Email
-=======================
+# Watchlist Delegation Email
 
 An admin can delegate the action on a Host alert via email.
 
 The email should reflect the alert details, the Host and any bookmarked solutions (KB Articles & web pages).
 
-HTML email (email.html)
------------------------
+## HTML email (email.html)
+
 HTML written to render in as many clients as possible using current best practices. Images could be served off vmware.com but chosen to attache them as part of the mutipart message and use cid: URI scheme to refer to image attachements from within the HTML.
 
-Plain-text email (email_plain.html)
------------------------------------
+## Plain-text email (email_plain.html)
+
 This plain text version can also be sent with the HTML version in the multipart smtp message.
 
-Testing
--------
+## Testing
+
 The run script in the test directory will:
 1. Create a multipart smtp message with both plain and html versions of the email message
 2. Encode the png images and add these to the multipart smtp message
 3. Update the HTML content to refer to these attachments using the cid: URI Scheme
 4. Send this multipart smtp message to a set of test email addreses associated with different email clients
 
-References
-----------
+## Resources
+
 * [Multipart MIME](http://www.w3.org/Protocols/rfc1341/7_2_Multipart.html)
 * [URI Scheme of cid:](http://en.wikipedia.org/wiki/URI_scheme)
 * [CID RFC](http://tools.ietf.org/html/rfc2392)
