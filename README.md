@@ -1,14 +1,14 @@
 # Watchlist Delegation Email
 
-An admin can delegate the action on a Host alert via email.
+An admin can delegate information about Watchlist objects and alerts on those objects via email.
 
-The email should reflect the alert details, the Host and any bookmarked solutions (KB Articles & web pages).
+The email should contains the alert and object details but should also include any bookmarked solutons (KB Articles & web pages).
 
-## HTML email (email.html)
+## HTML email (*_email.html)
 
 HTML written to render in as many clients as possible using current best practices. Images could be served off vmware.com but chosen to attache them as part of the mutipart message and use cid: URI scheme to refer to image attachements from within the HTML.
 
-## Plain-text email (email_plain.html)
+## Plain-text email (*_email_plain.html)
 
 This plain text version can also be sent with the HTML version in the multipart smtp message.
 

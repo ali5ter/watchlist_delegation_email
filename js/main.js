@@ -8,16 +8,12 @@ $(document).ready(function() {
 
     'use strict';
 
-    var annotation = $('.annotation > section');
-    $('.annotation > img').click( function() { annotation.toggle(); });
-    annotation.click( function() { annotation.toggle(); });
-
     resetLayout(function() {
-        $('.container > .content.html').load('email.html', function() {
-            console.log('html email content loaded');
-        });
-        $('.container > .content.plain').load('email_plain.html', function() {
-            console.log('plain email content loaded');
+        $('.container > .content').each(function(i) {
+            if (this.dataset === {} ) return;
+            $(this).load(this.dataset.file +'.html', function() {
+                console.log(this.dataset.file +'.html content loaded');
+            });
         });
     });
 });

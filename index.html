@@ -1,7 +1,7 @@
 <!DOCTYPE html>
     <head>
         <meta charset="utf-8">
-        <title>Beacon delegation email prototype</title>
+        <title>Watchlist v2.0: Delegation (aka Share) email prototype</title>
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" href="fonts/roboto/roboto_lightcondensed_macroman/stylesheet.css">
@@ -15,35 +15,34 @@
         <!-- use case 1: Share Host with Alert -->
 
         <div class="use_case">
-            <h2>Share VM with Alert</h2>
+            <h2><a id="uc01">uc01.</a>Share Alert on a VM</h2>
             <section class="metadata">
                 <section class="trigger">
                     <h3>Trigger</h3>
-                    <img src="imgs/VM_with_alert.png" title="VM with Alert"/>
+                    <img src="imgs/Alert_on_VM.png" title="Alert on a VM"/>
                     <div class="gesture tap" style="top:8em; left:10em;"></div>
+                    <div class="arrow-right"style="top:7.5em; left:13em;"></div>
                 </section>
                 <section class="annotation">
                     <h3>Notes</h3>
                     <ul>
-                        <li>It was heavy, this vapour, heavier than the densest smoke, so that, after the first tumultuous uprush and outflow of its impact, it sank down through the air and poured over the ground in a manner rather liquid than gaseous, abandoning the hills, and streaming into the valleys and ditches and watercourses even as I have heard the carbonic-acid gas that pours from volcanic clefts is wont to do</li>
-                        <li>And where it came upon water some chemical action occurred, and the surface would be instantly covered with a powdery scum that sank slowly and made way for more</li>
-                        <li>The vapour did not diffuse as a true gas would do</li>
+                        <li><strong>Change</strong>: Shows multiple networks</li>
+                        <li><strong>Future</strong>: Need to fix platform differentiated Watchlist links</li>
                     </ul>
                 </section>
             </section>
             <section class="mockup">
-                <h3>HTML <a href="email.html" alt="content without the chrome">content</a></h3>
+                <h3>HTML <a href="alert_on_vm_email.html" alt="content without the chrome">content</a></h3>
                 <div class="container">
                     <img src="imgs/container.png" alt="Device Chrome and mail app heading"/>
-                    <div class="content html"></div>
-
+                    <div class="content html" data-file="alert_on_vm_email"></div>
                 </div>
             </section>
             <section class="mockup">
-                <h3>Plain text <a href="email_plain.html" alt="content without the chrome">content</a></h3>
+                <h3>Plain text <a href="alert_on_vm_email_plain.html" alt="content without the chrome">content</a></h3>
                 <div class="container">
                     <img src="imgs/container.png" alt="Device Chrome and mail app heading"/>
-                    <div class="content plain"></div>
+                    <div class="content html" data-file="alert_on_vm_email_plain"></div>
                 </div>
             </section>
             <div class="clearfix"></div>
@@ -52,35 +51,35 @@
         <!-- use case 2: Share Host with Alert -->
 
         <div class="use_case">
-            <h2>Share Host with Alert</h2>
+            <h2><a id="uc02">uc02.</a>Share Alert on Host</h2>
             <section class="metadata">
                 <section class="trigger">
                     <h3>Trigger</h3>
-                    <img src="imgs/Host_with_alert.png" title="Host with Alert"/>
+                    <img src="imgs/Alert_on_Host.png" title="Alert on a Host"/>
                     <div class="gesture tap" style="top:8em; left:10em;"></div>
+                    <div class="arrow-right"style="top:7.5em; left:13em;"></div>
                 </section>
                 <section class="annotation">
                     <h3>Notes</h3>
                     <ul>
-                        <li>It was heavy, this vapour, heavier than the densest smoke, so that, after the first tumultuous uprush and outflow of its impact, it sank down through the air and poured over the ground in a manner rather liquid than gaseous, abandoning the hills, and streaming into the valleys and ditches and watercourses even as I have heard the carbonic-acid gas that pours from volcanic clefts is wont to do</li>
-                        <li>And where it came upon water some chemical action occurred, and the surface would be instantly covered with a powdery scum that sank slowly and made way for more</li>
-                        <li>The vapour did not diffuse as a true gas would do</li>
+                        <li><strong>Change</strong>: <em>Related objects</em> section contains all agregated items from the v2 spec but also adds the Cluster name&mdash;should the Host exist in a one. This assumes that VM alerts can be shown.</li>
+                        <li><strong>Change</strong>: <em>Hosts on Same Cluster</em> section contains all agregated items from the v2 spec. <question>Can we include Hosts alerts in this list for this release?</question></li>
+                        <li><strong>Future</strong>: Need to fix platform differentiated Watchlist links</li>
                     </ul>
                 </section>
             </section>
             <section class="mockup">
-                <h3>HTML <a href="email.html" alt="content without the chrome">content</a></h3>
+                <h3>HTML <a href="alert_on_host_email.html" alt="content without the chrome">content</a></h3>
                 <div class="container">
                     <img src="imgs/container.png" alt="Device Chrome and mail app heading"/>
-                    <div class="content html"></div>
-
+                    <div class="content html" data-file="alert_on_host_email"></div>
                 </div>
             </section>
             <section class="mockup">
-                <h3>Plain text <a href="email_plain.html" alt="content without the chrome">content</a></h3>
+                <h3>Plain text <a href="alert_on_host_email_plain.html" alt="content without the chrome">content</a></h3>
                 <div class="container">
                     <img src="imgs/container.png" alt="Device Chrome and mail app heading"/>
-                    <div class="content plain"></div>
+                    <div class="content html" data-file="alert_on_host_email_plain"></div>
                 </div>
             </section>
             <div class="clearfix"></div>
