@@ -19,7 +19,7 @@
         <div class="email_header">
             <p><span>To:</span> Junior Admins</p>
             <p><span>Cc/Bcc, From:</span> Remote Head Admin</p>
-            <p><span>Subject:</span> [VMware Beacon] VM Memory Usage is above 95%</p>
+            <p><span>Subject:</span> [vSphere Mobile Watchlist] Host hardware temperature status</p>
         </div>
         <!-- START CONTENT FOR BRIAN & CHITONG... let's party like it's 1999... -->
 
@@ -36,12 +36,12 @@
                 </tr>
                 <tr>
                     <td valign="top" style="font-family: sans-serif; color: gray">Alert:</td>
-                    <td valign="top" style="font-family: sans-serif; color: red;">VM Memory Usage is above 95% for 10 minutes</td>
+                    <td valign="top" style="font-family: sans-serif; color: red;">Host hardware temperature status</td>
                 </tr>
                 <tr><td colspan="2" height="4px"></td></tr>
                 <tr>
-                    <td valign="top" style="font-family: sans-serif; color: gray">VM:</td>
-                    <td valign="top" style="font-family: sans-serif; font-weight: bold;">acme-123456-FOO0042</td>
+                    <td valign="top" style="font-family: sans-serif; color: gray">Host:</td>
+                    <td valign="top" style="font-family: sans-serif; font-weight: bold;">ops-host02-eng.acme.com</td>
                 </tr>
                 <tr><td colspan="2" height="4px"></td></tr>
                 <tr>
@@ -51,10 +51,10 @@
                 <tr><td colspan="2" height="4px"></td></tr>
                 <tr>
                     <td valign="top" style="font-family: sans-serif; color: gray">Date:</td>
-                    <td valign="top" style="font-family: sans-serif;">Friday, October 18, 2013 at 6:42:12 AM EDT</td>
+                    <td valign="top" style="font-family: sans-serif;">Wednesday, March 5, 2014 at 3:42:12 PM EDT</td>
                 </tr>
                 <tr><td colspan="2" height="18px"></td></tr>
-                <tr><td colspan="2" valign="top" style="font-family: sans-serif;">Default alarm to monitor virtual machine memory usage</td></tr>
+                <tr><td colspan="2" valign="top" style="font-family: sans-serif;">Default alarm to monitor temperature. See that hosts's Hardware Status tab for more details.</td></tr>
                 <tr><td colspan="2" height="18px"></td></tr>
                 <tr><td colspan="2" valign="top" style="font-family: sans-serif;"><a href="#">View in vSphere Mobile Watchlist (Android)</a></tr>
                 <tr><td colspan="2" height="18px"></td></tr>
@@ -75,36 +75,91 @@
                 <tr><td colspan="2" valign="top" style="font-family: sans-serif; font-weight: bold;">Related Objects</td></tr>
                 <tr><td colspan="2" height="18px"></td></tr>
                 <tr>
-                    <td valign="top" style="font-family: sans-serif; color: gray">Virtual Center:</td>
-                    <td valign="top" style="font-family: sans-serif;">ue-server.eng.vmware.com</td>
-                </tr>
-                <tr><td colspan="2" height="10px"></td></tr>
-                <tr>
                     <td valign="top" style="font-family: sans-serif; color: gray">Cluster:</td>
                     <td valign="top" style="font-family: sans-serif;">ue-cluster-02</td>
                 </tr>
                 <tr><td colspan="2" height="10px"></td></tr>
                 <tr>
-                    <td valign="top" style="font-family: sans-serif; color: gray">Host:</td>
-                    <td valign="top" style="font-family: sans-serif;">ue-host-07</td>
+                    <td colspan="2" valign="top" style="font-family: sans-serif; color: gray">VMs (6):</td>
                 </tr>
                 <tr>
-                    <td colspan="2" valign="top" style="font-family: sans-serif; color: red;">&nbsp;&nbsp;Big honking alert on this host</td>
+                    <td colspan="2" valign="top" style="font-family: sans-serif;">acme-123456-FOO0042</td>
+                </tr>
+                <tr>
+                    <td colspan="2" valign="top" style="font-family: sans-serif; color: orange;">&nbsp;&nbsp;Virual machine Consolidation Needed alarm</td>
+                </tr>
+                <tr>
+                    <td colspan="3" valign="top" style="font-family: sans-serif;">acme-123456-FOO0043</td>
+                </tr>
+                <tr>
+                    <td colspan="2" valign="top" style="font-family: sans-serif; color: red;">&nbsp;&nbsp;Timed out starting Secondary VM.</td>
+                </tr>
+                <tr>
+                    <td colspan="4" valign="top" style="font-family: sans-serif;">acme-123456-FOO0044</td>
+                </tr>
+                <tr>
+                    <td colspan="2" valign="top" style="font-family: sans-serif; color: red;">&nbsp;&nbsp;Timed out starting Secondary VM.</td>
+                </tr>
+                <tr>
+                    <td colspan="2" valign="top" style="font-family: sans-serif;">acme-123456-FOO0045</td>
+                </tr>
+                <tr>
+                    <td colspan="2" valign="top" style="font-family: sans-serif; color: red;">&nbsp;&nbsp;Timed out starting Secondary VM.</td>
+                </tr>
+                <tr>
+                    <td colspan="2" valign="top" style="font-family: sans-serif;">acme-123456-FOO0046</td>
+                </tr>
+                <tr>
+                    <td colspan="2" valign="top" style="font-family: sans-serif;">acme-123456-FOO0047</td>
+                </tr>
+                <tr>
+                    <td colspan="2" valign="top" style="font-family: sans-serif; color: red;">&nbsp;&nbsp;Timed out starting Secondary VM.</td>
                 </tr>
                 <tr><td colspan="2" height="10px"></td></tr>
                 <tr>
-                    <td valign="top" style="font-family: sans-serif; color: gray">Resource Pool:</td>
-                    <td valign="top" style="font-family: sans-serif;">ue-critical</td>
+                    <td colspan="2" valign="top" style="font-family: sans-serif; color: gray">Datastores (1):</td>
+                </tr>
+                <tr>
+                    <td colspan="2" valign="top" style="font-family: sans-serif;">datastore01</td>
                 </tr>
                 <tr><td colspan="2" height="10px"></td></tr>
                 <tr>
-                    <td valign="top" style="font-family: sans-serif; color: gray">Network:</td>
-                    <td valign="top" style="font-family: sans-serif;">VM Network</td>
+                    <td colspan="2" valign="top" style="font-family: sans-serif; color: gray">Networks (1):</td>
+                </tr>
+                <tr>
+                    <td colspan="2" valign="top" style="font-family: sans-serif;">VM Network</td>
                 </tr>
                 <tr><td colspan="2" height="10px"></td></tr>
                 <tr>
-                    <td valign="top" style="font-family: sans-serif; color: gray">Datastore:</td>
-                    <td valign="top" style="font-family: sans-serif;">storage-007</td>
+                    <td colspan="2" valign="top" style="font-family: sans-serif; color: gray">Distributed Switches (1):</td>
+                </tr>
+                <tr>
+                    <td colspan="2" valign="top" style="font-family: sans-serif;">switch01</td>
+                </tr>
+                <tr><td colspan="2" height="18px"></td></tr>
+            </table>
+
+            <!-- ## Hosts on Same Cluster -->
+
+            <table cellpadding="0" cellspacing="0" style="display: block; max-width: 600px">
+                <tr>
+                    <td width="130" height="1"></td>
+                    <td height="1"></td>
+                </tr>
+
+                <tr><td colspan="2" valign="top" style="font-family: sans-serif; font-weight: bold;">Hosts on Same Cluster</td></tr>
+                <tr><td colspan="2" height="18px"></td></tr>
+                <tr>
+                    <td colspan="2" valign="top" style="font-family: sans-serif;">ops-host01-eng.acme.com</td>
+                </tr>
+                <tr>
+                    <td colspan="2" valign="top" style="font-family: sans-serif; color: red;">&nbsp;&nbsp;Some other host issue</td>
+                </tr>
+                <tr>
+                    <td colspan="2" valign="top" style="font-family: sans-serif;">dev-host01-eng.acme.com</td>
+                </tr>
+                <tr>
+                    <td colspan="2" valign="top" style="font-family: sans-serif;">dev-host02-eng.acme.com</td>
                 </tr>
                 <tr><td colspan="2" height="18px"></td></tr>
             </table>
@@ -113,7 +168,7 @@
 
             <table cellpadding="0" cellspacing="0" style="display: block; max-width: 600px">
 
-                <tr><td valign="top" style="font-family: sans-serif; font-weight: bold;">Related Articles:</td></tr>
+                <tr><td valign="top" style="font-family: sans-serif; font-weight: bold;">Related Articles</td></tr>
                 <tr><td height="18px"></td></tr>
 
                 <!-- ## KB Article -->

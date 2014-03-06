@@ -19,20 +19,21 @@
         <div class="email_header">
             <p><span>To:</span> Junior Admins</p>
             <p><span>Cc/Bcc, From:</span> Remote Head Admin</p>
-            <p><span>Subject:</span> [VMware Beacon] VM Memory Usage is above 95%</p>
+            <p><span>Subject:</span> [ivSphere mobile Watchlist] </p>
+            <p><span>Subject:</span> [vSphere Mobile Watchlist] Host hardware temperature status</p>
         </div>
         <pre>
         <!-- START CONTENT FOR BRIAN & CHITONG... plain and simple -->
 
-Alert:    VM Memory Usage is above 95% for 10 minutes
+Alert:    Host hardware temperature status
 
-VM:       acme-123456-FOO0042
+Host:     ops-host02-eng.acme.com
 
 Severity: Critical
 
-Date:     Friday, October 18, 2013 at 6:42:12 AM EDT
+Date:     Wednesday, March 5, 2014 at 3:42:12 PM EDT
 
-Default alarm to monitor virtual machine memory usage
+Default alarm to monitor temperature. See that hosts's Hardware Status tab for more details.
 
 View in vSphere Mobile Watchlist (Android): adroidproto:///alert?vsphere=04BCB1EA-D98B-4015-8579-52FCCB30C999&key=26dca829-afe0-4221-b245-921df6dbb2c5
 
@@ -44,18 +45,38 @@ View in vSphere Web Client: https://ue-vc-client.eng.vmware.com:9443/vsphere-cli
 Related Objects
 ----------------------------
 
-Virtual Center: ue-server.eng.vmware.com
-
 Cluster:        ue-cluster-02
 
-Host:           ue-host-07
-  Big honking alert on this host</td>
+VMs (6):
+acme-123456-FOO0042
+  Virual machine Consolidation Needed alarm
+acme-123456-FOO0043
+  Timed out starting Secondary VM
+acme-123456-FOO0044
+  Timed out starting Secondary VM
+acme-123456-FOO0045
+  Timed out starting Secondary VM
+acme-123456-FOO0046
+acme-123456-FOO0047
+  Timed out starting Secondary VM
 
-Resource Pool:  ue-critical
+Datastores (1):
+datastore01
 
-Network:        VM Network
+Networks (1):
+VM Network
 
-Datastore:      storage-007
+Distributed Switches (1):
+switch01
+
+
+Hosts on Same Cluster
+----------------------------
+
+ops-host01-eng.acme.com
+  Some other host issue
+dev-host01-eng.acme.com
+dev-host02-eng.acme.com
 
 
 Related Articles:
