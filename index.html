@@ -4,28 +4,88 @@
         <title>Beacon delegation email prototype</title>
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="fonts/roboto/roboto_lightcondensed_macroman/stylesheet.css">
+        <link rel="stylesheet" href="fonts/roboto/roboto_boldcondensed_macroman/stylesheet.css">
+        <link rel="stylesheet" href="fonts/roboto/roboto_regular_macroman/stylesheet.css">
     </head>
     <body>
-        <div class="group">
-            <section class="container">
-                <img src="images/container.png"/>
-                <div class="content html"></div>
-                <p class="label"><a href="email.html">HTML email content</a></p>
+        <h1><a id="uc01"/></a>Watchlist v2.0: Delegation email</h1>
+        <hr/>
+
+        <!-- use case 1: Share Host with Alert -->
+
+        <div class="use_case">
+            <h2>Share VM with Alert</h2>
+            <section class="metadata">
+                <section class="trigger">
+                    <h3>Trigger</h3>
+                    <img src="imgs/VM_with_alert.png" title="VM with Alert"/>
+                    <div class="gesture tap" style="top:8em; left:10em;"></div>
+                </section>
+                <section class="annotation">
+                    <h3>Notes</h3>
+                    <ul>
+                        <li>It was heavy, this vapour, heavier than the densest smoke, so that, after the first tumultuous uprush and outflow of its impact, it sank down through the air and poured over the ground in a manner rather liquid than gaseous, abandoning the hills, and streaming into the valleys and ditches and watercourses even as I have heard the carbonic-acid gas that pours from volcanic clefts is wont to do</li>
+                        <li>And where it came upon water some chemical action occurred, and the surface would be instantly covered with a powdery scum that sank slowly and made way for more</li>
+                        <li>The vapour did not diffuse as a true gas would do</li>
+                    </ul>
+                </section>
             </section>
-            <section class="container">
-                <img src="images/container.png"/>
-                <div class="content plain"></div>
-                <p class="label"><a href="email_plain.html">Plain email content</a></p>
+            <section class="mockup">
+                <h3>HTML <a href="email.html" alt="content without the chrome">content</a></h3>
+                <div class="container">
+                    <img src="imgs/container.png" alt="Device Chrome and mail app heading"/>
+                    <div class="content html"></div>
+
+                </div>
             </section>
+            <section class="mockup">
+                <h3>Plain text <a href="email_plain.html" alt="content without the chrome">content</a></h3>
+                <div class="container">
+                    <img src="imgs/container.png" alt="Device Chrome and mail app heading"/>
+                    <div class="content plain"></div>
+                </div>
+            </section>
+            <div class="clearfix"></div>
         </div>
-        <section class="annotation">
-            <img src="images/info_icon.png" title="Annotation..."/>
-            <section>
-                <p>An admin can delegate the action on a Host alert via email.</p>
-                <p>The email should reflect the alert details, the Host and any bookmarked solutions (KB Articles & web pages).</p>
-                <p>Brain/Chitong: Refer to source links under mockups.</p>
+
+        <!-- use case 2: Share Host with Alert -->
+
+        <div class="use_case">
+            <h2>Share Host with Alert</h2>
+            <section class="metadata">
+                <section class="trigger">
+                    <h3>Trigger</h3>
+                    <img src="imgs/Host_with_alert.png" title="Host with Alert"/>
+                    <div class="gesture tap" style="top:8em; left:10em;"></div>
+                </section>
+                <section class="annotation">
+                    <h3>Notes</h3>
+                    <ul>
+                        <li>It was heavy, this vapour, heavier than the densest smoke, so that, after the first tumultuous uprush and outflow of its impact, it sank down through the air and poured over the ground in a manner rather liquid than gaseous, abandoning the hills, and streaming into the valleys and ditches and watercourses even as I have heard the carbonic-acid gas that pours from volcanic clefts is wont to do</li>
+                        <li>And where it came upon water some chemical action occurred, and the surface would be instantly covered with a powdery scum that sank slowly and made way for more</li>
+                        <li>The vapour did not diffuse as a true gas would do</li>
+                    </ul>
+                </section>
             </section>
-        </section>
+            <section class="mockup">
+                <h3>HTML <a href="email.html" alt="content without the chrome">content</a></h3>
+                <div class="container">
+                    <img src="imgs/container.png" alt="Device Chrome and mail app heading"/>
+                    <div class="content html"></div>
+
+                </div>
+            </section>
+            <section class="mockup">
+                <h3>Plain text <a href="email_plain.html" alt="content without the chrome">content</a></h3>
+                <div class="container">
+                    <img src="imgs/container.png" alt="Device Chrome and mail app heading"/>
+                    <div class="content plain"></div>
+                </div>
+            </section>
+            <div class="clearfix"></div>
+        </div>
+
         <script src="js/vendor/jquery-1.9.1.min.js"></script>
         <script src="js/config.js"></script>
         <script src="js/main.js"></script>

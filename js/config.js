@@ -9,6 +9,6 @@ var config = {
         'height': '504px',
         'width': '320px',
         'x': '26px',
-        'y': '166px'
+        'y': '216px'
     }
 }
