@@ -38,7 +38,7 @@ function createMockups(onComplete) {
             );
 
             $(this).append(titleElem, containerElem);
-            console.log('created mockup layout for '+ this.dataset.file);
+            console.debug('created mockup layout for '+ this.dataset.file);
 
             if (mockupLen === i) return resolve();
         });
@@ -71,6 +71,7 @@ function styleMockups() {
             top: config.content.y
         });
 
+        console.debug('style mockup containers');
         return resolve();
     });
 }
@@ -88,14 +89,16 @@ function loadMockupContent() {
 
         'use strict';
 
-        $('.container > .content').each(function() {
+        var content = $('.container > .content'),
+            contentLen = content.length -1;
+
+        $('.container > .content').each(function(i) {
             if (this.dataset === {} ) return;
             $(this).load(this.dataset.file +'.html', function() {
-                console.log(this.dataset.file +'.html content loaded');
+                console.debug('loading content for '+ this.dataset.file);
+                if (contentLen === i) return resolve();
             });
         });
-
-        return resolve();
     });
 }
 
@@ -110,7 +113,7 @@ function loadMockupContent() {
         createMockups()
         .then(function() { return styleMockups(); })
         .then(function() { return loadMockupContent(); })
-        .then(function() { console.log('complete'); });
+        .then(function() { console.debug('complete'); });
     });
 
 }());

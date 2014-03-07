@@ -19,17 +19,20 @@
         <div class="email_header">
             <p><span>To:</span> Junior Admins</p>
             <p><span>Cc/Bcc, From:</span> Remote Head Admin</p>
-            <p><span>Subject:</span> [VMware Beacon] VM Memory Usage is above 95%</p>
+            <p><span>Subject:</span> [vSphere Mobile Watchlist] Host hardware temperature status</p>
         </div>
         <pre>
         <!-- START CONTENT FOR BRIAN & CHITONG... plain and simple -->
 
-VM:       ops-host02-eng.acme.com
+Alert:    Host hardware temperature status
 
-State:    Connected
+Host:     ops-host02-eng.acme.com
 
-Alerts (1):
-  Host Hardware temperature status
+Severity: Critical
+
+Date:     Wednesday, March 5, 2014 at 3:42:12 PM EDT
+
+Default alarm to monitor temperature. See that hosts's Hardware Status tab for more details.
 
 View in vSphere Mobile Watchlist (Android): adroidproto:///alert?vsphere=04BCB1EA-D98B-4015-8579-52FCCB30C999&key=26dca829-afe0-4221-b245-921df6dbb2c5
 
@@ -38,50 +41,12 @@ View in vSphere Mobile Watchlist (iOS): iosproto:///alert?vsphere=04BCB1EA-D98B-
 View in vSphere Web Client: https://ue-vc-client.eng.vmware.com:9443/vsphere-client/#extensionId=vsphere.opsmgmt.alarms.triggeredAlarmsViewVm;context=com.vmware.core.model%3A%3AServerObjectRef~04BCB1EA-D98B-4015-8579-52FCCB30C999%3AVirtualMachine%3Avm-900~core
 
 
-Resources
-----------------------------
-
-CPU:     9 / 4.6 GHz
-Memory:  3.5 / 4 GB
-Storage: 91 / 193 GB
-
-
-Details
-----------------------------
-
-Processor:          Intel(R) Core(TM) i7-3615QM CPU @2.30GHz
-
-Logical Processors: 2
-
-NICs:               1
-
-Uptime:             11 days, 3 hours
-
-
 Related Objects
 ----------------------------
 
-Virtual Center: ue-server.eng.vmware.com
-
 Cluster:        ue-cluster-02
 
-Host:           ue-host-07
-  Big honking alert on this host</td>
-
-Resource Pool:  ue-critical
-
-Datastore:      storage-007
-
-Network(2):
-VM Network
-Private Network
-
-Datastore:      storage-007
-
-
-VMs on Same Host
-----------------------------
-
+VMs (6):
 acme-123456-FOO0042
   Virual machine Consolidation Needed alarm
 acme-123456-FOO0043
@@ -93,6 +58,24 @@ acme-123456-FOO0045
 acme-123456-FOO0046
 acme-123456-FOO0047
   Timed out starting Secondary VM
+
+Datastores (1):
+datastore01
+
+Networks (1):
+VM Network
+
+Distributed Switches (1):
+switch01
+
+
+Hosts on Same Cluster
+----------------------------
+
+ops-host01-eng.acme.com
+  Some other host issue
+dev-host01-eng.acme.com
+dev-host02-eng.acme.com
 
 
 Related Articles:
