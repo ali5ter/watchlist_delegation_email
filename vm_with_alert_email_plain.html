@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <title>Email Delegation</title>
+        <style>
+        html { background: rgba(0,0,0,0); color: #111; font-family: sans-serif; font-weight: 300; font-size: 1em; line-height: 1.4; }
+        .email_header p { margin: 0 0 0 .8em; padding: .8em .8em .8em 0; border-bottom: solid 1px #ccc; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+        .email_header p > span { color: #8f8f8f; }
+        .cursor { background: rgb(0,128,255); margin-top: .8em; margin-left: .8em; height: 1.2em; width: .1em; }
+        .sig { font-size: 1em; margin: 0 0 0 .8em; padding: .8em .8em .8em 0; }
+        pre { margin: 0; margin-top: -3em; padding: .8em; white-space: -moz-pre-wrap; white-space: -pre-wrap; white-space: -o-pre-wrap; white-space: pre-wrap; word-wrap: break-word; }
+        .no_phone table table { border: 1px solid #ddd; padding: 0 .5em; }
+        .no_phone .email_header,
+        .no_phone .cursor,
+        .no_phone .sig { display: none; }
+        </style>
+    </head>
+    <body>
+        <div class="email_header">
+            <p><span>To:</span> Junior Admins</p>
+            <p><span>Cc/Bcc, From:</span> Remote Head Admin</p>
+            <p><span>Subject:</span> [VMware Beacon] VM Memory Usage is above 95%</p>
+        </div>
+        <pre>
+        <!-- START CONTENT FOR BRIAN & CHITONG... plain and simple -->
+
+VM:       acme-123456-FOO0042
+
+State:    Powered On
+
+Alerts (1):
+vSphere HA cannot reset VM
+
+View in vSphere Mobile Watchlist (Android): adroidproto:///alert?vsphere=04BCB1EA-D98B-4015-8579-52FCCB30C999&key=26dca829-afe0-4221-b245-921df6dbb2c5
+
+View in vSphere Mobile Watchlist (iOS): iosproto:///alert?vsphere=04BCB1EA-D98B-4015-8579-52FCCB30C999&key=26dca829-afe0-4221-b245-921df6dbb2c5
+
+View in vSphere Web Client: https://ue-vc-client.eng.vmware.com:9443/vsphere-client/#extensionId=vsphere.opsmgmt.alarms.triggeredAlarmsViewVm;context=com.vmware.core.model%3A%3AServerObjectRef~04BCB1EA-D98B-4015-8579-52FCCB30C999%3AVirtualMachine%3Avm-900~core
+
+
+Resources
+----------------------------
+
+CPU:     191 / 204 MHz
+Memory:  8 / 16 GB
+Storage: 17 / 32 GB
+
+
+Details
+----------------------------
+
+IP Address:   10.23.46.12
+
+DNS Name:     acme-123456-FOO0042
+
+Guest OS:     Red Hat Enterprize Linux 7 (32-bit)
+
+VMware Tools: Out of Date
+
+
+Related Objects
+----------------------------
+
+Virtual Center: ue-server.eng.vmware.com
+
+Cluster:        ue-cluster-02
+
+Host:           ue-host-07
+  Big honking alert on this host</td>
+
+Resource Pool:  ue-critical
+
+Datastore:      storage-007
+
+Network(2):
+VM Network
+Private Network
+
+Datastore:      storage-007
+
+
+Related Articles:
+----------------------------
+
+Troubleshooting ESX/ESXi virtual machine performance issues
+
+VMware Knowledge Base - This article provides information on isolating a performance issue on ESX/ESXi. Bad performance can be caused by several different areas: CPU constraints, memory overcommitment, storage latency, or network latenc
+Quote: All LUNs being presented to an ESX Server host (VMFS and RDM). Any capacity larger than the limit is not handled. The LUN may not be presented as a choice for a data store in the Virtual Infrastructure or vSphere Client. All LUNs being presented to an ESX Server host (VMFS and RDM).
+
+Link: http://kb.vmware.com/kb/2001003
+
+----------------------------
+The Compatibility Guides are now updated with VSAN and vFlash info!
+
+Link: http://www.yellow-bricks.com/2013/09/23/the-compatibility-guides-are-now-updated-with-vsan-and-vflash-info/
+        <!-- END CONTENT FOR BRIAN & CHITONG -->
+        </pre>
+        <div class="cursor"></div>
+        <p class="sig">-- Bob Blogs, Head Admin, Acme Inc.</p>
+        <script src="js/vendor/jquery-1.9.1.min.js"></script>
+        <script>
+
+$(document).ready(function() {
+    'use strict';
+    if ($('.content').length === 0) {  // when viewed outside of container
+        $('body').toggleClass('no_phone');
+    }
+});
+
+        </script>
+    </body>
+</html>
