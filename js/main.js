@@ -15,7 +15,7 @@
  *
  */
 
-function createMockups(onComplete) {
+function createMockups() {
     return new Promise(function(resolve, reject) {
 
         'use strict';
