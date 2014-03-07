@@ -1,3 +1,11 @@
+/*
+
+    @file config.js
+    Style declarations for all mockups container and content class elements
+    TODO: Any justification to keep seperate from CSS?
+
+*/
+
 var config = {
     'container': {  // the image representing the desktop & wizard chrome
         'color': '#fff',
