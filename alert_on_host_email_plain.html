@@ -96,16 +96,8 @@ Link: http://www.yellow-bricks.com/2013/09/23/the-compatibility-guides-are-now-u
         </pre>
         <div class="cursor"></div>
         <p class="sig">-- Bob Blogs, Head Admin, Acme Inc.</p>
-        <script src="js/vendor/jquery-1.9.1.min.js"></script>
         <script>
-
-$(document).ready(function() {
-    'use strict';
-    if ($('.content').length === 0) {  // when viewed outside of container
-        $('body').toggleClass('no_phone');
-    }
-});
-
+            if (document.querySelector('.content') === null) document.body.classList.toggle('no_phone');
         </script>
     </body>
 </html>
