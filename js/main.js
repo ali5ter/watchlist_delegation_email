@@ -101,10 +101,11 @@ function loadMockupContent(onComplete) {
 
         'use strict';
 
+        // TODO: Once browser coverage becomes wider, use javascript promises
         createMockups(function() {
             styleMockups(function() {
                 loadMockupContent(function() {
-                    console.debug('compelte');
+                    console.debug('complete');
                 });
             });
         });
